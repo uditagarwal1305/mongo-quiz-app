@@ -2,6 +2,7 @@ import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import Navbar from "./components/NavBar";
 import CreateQuiz from "./components/CreateQuiz";
 import Quiz from "./components/Quiz";
+import Showquiz from "./components/Showquiz";
 
 function App() {
  return (
@@ -20,7 +21,13 @@ function App() {
     <Route  path="/show">
     <Quiz />
     </Route>
-    </Switch>   
+    </Switch>  
+
+    <Switch>
+    <Route  path="/quiz">
+      <Showquiz/>
+    </Route>
+    </Switch>  
     
     </div>
    </Router>

@@ -1,6 +1,15 @@
 import React, {useState} from "react";
 import axios from "axios";
 
+
+const initialState = {
+    question: '',
+        option1: '',
+        option2: '',
+        option3: '',
+        option4: '',
+        correctop: ''
+  };
 function CreateQuiz() {
     const [input,setInput]=useState({
         question: '',
@@ -11,6 +20,11 @@ function CreateQuiz() {
         correctop: ''
        
     })
+
+    const clearState = () => {
+        setInput({ ...initialState });
+      };
+
 
 function handleChange(event){
     const {name,value}=event.target;
@@ -36,6 +50,7 @@ function handleClick(event){
         correctop: input.correctop
     }
     axios.post("http://localhost:3001/create", newQuiz)
+    clearState();
 }
 
     return <div className="container">
@@ -44,7 +59,7 @@ function handleClick(event){
             <div className="form-group">
                 <textarea onChange={handleChange} name="question" value={input.question} autoComplete="off" className="form-control" placeholder="Enter Question"></textarea>
             </div>
-            <br></br>
+            <br></br>   
 
             <div className="form-group">
                 <input onChange={handleChange} name="option1" value={input.option1} autoComplete="off" className="form-control" placeholder="Option 1"></input>

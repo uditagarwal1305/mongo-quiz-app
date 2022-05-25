@@ -1,0 +1,39 @@
+.Showquiz {
+    text-align: center;
+  }
+  
+  .Showquiz-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Showquiz-logo {
+      animation: Showquiz-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Showquiz-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .Showquiz-link {
+    color: #61dafb;
+  }
+  
+  @keyframes Showquiz-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

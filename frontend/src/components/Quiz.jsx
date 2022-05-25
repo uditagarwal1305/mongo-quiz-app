@@ -1,6 +1,7 @@
 
 import React,{useEffect,useState} from "react";
 
+
 function Quiz() {
 
     const [quiz,setQuiz]= useState([{
@@ -15,6 +16,7 @@ function Quiz() {
     useEffect(() => {
         fetch("/quiz").then(res => {
             if(res.ok){
+                
                 return res.json()
             }
         }).then(jsonRes => setQuiz(jsonRes));
