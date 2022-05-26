@@ -57,41 +57,48 @@ function handleClick(event){
         <h1>Create Quiz</h1>
         <form >
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h3> Qusetion</h3></label>
                 <textarea onChange={handleChange} name="question" value={input.question} autoComplete="off" className="form-control" placeholder="Enter Question"></textarea>
             </div>
             <br></br>   
 
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h4>Option 1</h4></label>
                 <input onChange={handleChange} name="option1" value={input.option1} autoComplete="off" className="form-control" placeholder="Option 1"></input>
             </div>
 
             <br></br>
 
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h4>Option 2</h4></label>
                 <input onChange={handleChange} name="option2" value={input.option2} autoComplete="off" className="form-control" placeholder="Option 2"></input>
             </div>
 
             <br></br>
 
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h4>Option 3</h4></label>
                 <input onChange={handleChange} name="option3" value={input.option3} autoComplete="off" className="form-control" placeholder="Option 3"></input>
             </div>
 
             <br></br>
 
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h4>Option 4</h4></label>
                 <input onChange={handleChange} name="option4" value={input.option4} autoComplete="off" className="form-control" placeholder="Option 4"></input>
             </div>
 
             <br></br>
 
             <div className="form-group">
+            <label for="exampleInputEmail1"> <h4>Correct Option</h4></label>
                 <input onChange={handleChange} name="correctop" value={input.correctop} autoComplete="off" className="form-control" placeholder="Correct Option"></input>
             </div>
 
             <br></br>
 
-            <button onClick={handleClick} className="btn btn-lg btn-info"> Add Question </button>
+            <button onClick={handleClick} > Add Question </button>
+            <br></br>
             
         </form>
     </div>
